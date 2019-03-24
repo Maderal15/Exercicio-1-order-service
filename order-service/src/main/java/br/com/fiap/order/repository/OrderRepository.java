@@ -14,41 +14,19 @@ public class OrderRepository {
 
     public OrderRepository(){
         orders = new ArrayList<>();
-        
-   /*     OrderDTO orderDTO = new OrderDTO();
-        orderDTO.setId(1l);
-        orderDTO.setNome("Danilo Maderal");
-        orderDTO.setEmail("maderal@gmail.com");
-        orderDTO.setShippingAddress("Avenida Paulista");
-        
-        List<OrderItem> orderItens = new ArrayList<>();
-        OrderItem orderItem = new OrderItem();
-        orderItem.setId(1l);
-        orderItem.setNome("jogo");
-        orderItem.setPreco(100);
-        orderItens.add(orderItem);
-        orderDTO.setOrderItens(orderItens);
-        
-        orderDTO.setPrecoTotal(100);
-        
-        Pagamento pagamento = new Pagamento();
-        pagamento.setId(1l);
-        pagamento.setIdTransacao("1a3a3a4a");
-        pagamento.setValidadeCartao(LocalDate.now());
-        pagamento.setNumeroCartao(1552254l);
-        pagamento.setBandeira("Dinners");
-        orderDTO.setPagamento(pagamento);
-        
-        orderDTO.setDataPedido(LocalDate.now());
-        orderDTO.setStatus("A");
-        
-        orders.add(orderDTO);*/
-        
-        
+               
     }
 
     public OrderDTO findById(Integer id) {
-        return orders.stream().filter((orderDTO) -> orderDTO.getId().equals(id)).findFirst().orElse(null);
+       for (OrderDTO orderDTO : orders) {
+    	   if(orderDTO.getId().equals(id)) {
+    		   return orderDTO;
+    	   }
+		
+       }
+       
+       return null;
+	
     }
 
 
