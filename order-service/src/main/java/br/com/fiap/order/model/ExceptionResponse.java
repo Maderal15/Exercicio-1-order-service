@@ -1,4 +1,4 @@
-package br.com.fiap.order.exception;
+package br.com.fiap.order.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
@@ -18,26 +18,6 @@ public class ExceptionResponse {
         this.messagem = messagem;
         this.detalhes = detalhes;
     }
-    
-    
-	public LocalDateTime getTempoHora() {
-		return tempoHora;
-	}
-	public void setTempoHora(LocalDateTime tempoHora) {
-		this.tempoHora = tempoHora;
-	}
-	public String getMessagem() {
-		return messagem;
-	}
-	public void setMessagem(String messagem) {
-		this.messagem = messagem;
-	}
-	public String getDetalhes() {
-		return detalhes;
-	}
-	public void setDetalhes(String detalhes) {
-		this.detalhes = detalhes;
-	}
     
     
 }
